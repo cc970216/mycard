@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ====== OG 标签：控制卡片展示 ====== -->
+  <meta property="og:title" content="点击了解咨询" />
+  <meta property="og:description" content="长按填加" />
+  <meta property="og:image" content="https://CC970216.github.io/mycard/cover.png" />
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="600" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://CC970216.github.io/mycard/" />
+
+  <!-- Twitter 卡片兼容 -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="点击了解咨询" />
+  <meta name="twitter:description" content="长按填加" />
+  <meta name="twitter:image" content="https://CC970216.github.io/mycard/cover.png" />
+
+  <title>点击了解咨询</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 30px;
+      max-width: 380px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .card h1 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .card .subtitle {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 24px;
+    }
+
+    /* ====== 二维码区域 ====== */
+    .qr-section {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .qr-section img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .qr-section p {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #999;
+    }
+
+    /* ====== 图片展示区域 ====== */
+    .gallery {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: calc(50% - 5px);
+      border-radius: 10px;
+      object-fit: cover;
+      aspect-ratio: 1;
+    }
+
+    .gallery img:only-child,
+    .gallery img.full-width {
+      width: 100%;
+      aspect-ratio: auto;
+      max-height: 300px;
+    }
+
+    /* ====== 底部按钮 ====== */
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 36px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>点击了解咨询</h1>
+    <p class="subtitle">扫码了解更多详情</p>
+
+    <!-- 二维码 -->
+    <div class="qr-section">
+      <!-- 把 src 换成你的二维码图片地址 -->
+      <img src="./qrcode.png" alt="二维码" />
+      <p>📱 扫一扫添加好友</p>
+    </div>
+
+    <!-- 展示图片 -->
+    <div class="gallery">
+      <!-- 把 src 换成你的图片地址，可以放多张 -->
+      <img src="./image1.jpg" alt="图片1" class="full-width" />
+    </div>
+
+    <!-- 可选按钮 -->
+    <a href="https://你的链接" class="btn">查看更多</a>
+  </div>
+</body>
+</html>
